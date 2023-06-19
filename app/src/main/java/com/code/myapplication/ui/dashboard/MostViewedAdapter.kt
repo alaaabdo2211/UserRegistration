@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.code.myapplication.data.remote.MostViewData
+import com.code.myapplication.domain.entities.MostViewData
 import com.code.myapplication.databinding.PopularViewedUsersItemsBinding
 
 

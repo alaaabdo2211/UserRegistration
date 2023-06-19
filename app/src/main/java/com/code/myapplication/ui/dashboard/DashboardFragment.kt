@@ -9,7 +9,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.code.myapplication.data.remote.MostViewData
+import com.code.myapplication.domain.entities.MostViewData
 import com.code.myapplication.databinding.FragmentDashboardBinding
 import com.code.myapplication.util.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint

@@ -1,4 +1,4 @@
-package com.code.myapplication.data.remote
+package com.code.myapplication.domain.entities
 
 data class MostViewData(
     val id: Long,

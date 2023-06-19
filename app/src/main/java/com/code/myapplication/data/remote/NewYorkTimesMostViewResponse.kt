@@ -1,10 +1,12 @@
 package com.code.myapplication.data.remote
 
+import com.code.myapplication.domain.entities.MostViewData
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 
 @Serializable
+
 data class NewYorkTimesMostViewResponse(
     val status: String,
     val copyright: String,

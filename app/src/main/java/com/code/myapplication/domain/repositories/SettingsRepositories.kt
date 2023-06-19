@@ -1,4 +1,4 @@
-package com.code.myapplication.util
+package com.code.myapplication.domain.repositories
 
 import android.content.SharedPreferences
 import java.util.*

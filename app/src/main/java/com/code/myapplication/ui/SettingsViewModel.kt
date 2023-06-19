@@ -1,7 +1,7 @@
 package com.code.myapplication.ui
 
 import androidx.lifecycle.ViewModel
-import com.code.myapplication.util.SettingsRepositories
+import com.code.myapplication.domain.repositories.SettingsRepositories
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

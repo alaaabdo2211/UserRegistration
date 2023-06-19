@@ -1,6 +1,6 @@
 package com.code.myapplication.ui.dashboard
 
-import com.code.myapplication.data.remote.MostViewData
+import com.code.myapplication.domain.entities.MostViewData
 
 
 data class MostViewedDataState(
