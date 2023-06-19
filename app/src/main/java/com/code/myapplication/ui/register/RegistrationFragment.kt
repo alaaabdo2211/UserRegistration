@@ -9,6 +9,7 @@ import com.code.myapplication.R
 import com.code.myapplication.databinding.FragmentRegistrationBinding
 import com.code.myapplication.ui.MainActivity
 import com.code.myapplication.util.BaseFragment
+import com.code.myapplication.util.UiSingleEvent
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -38,6 +39,14 @@ class RegistrationFragment :
 
             }
         }
+        lifecycleScope.launch {
+            viewModel.uiEvent.collect {
+                if (it is UiSingleEvent.NavigateToNextPage) {
+                    val intent = Intent(requireActivity(), MainActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+        }
 
         binding.btnRegister.setOnClickListener {
             binding.run {
@@ -52,8 +61,7 @@ class RegistrationFragment :
                         etDateBirthReg.text.toString(),
                         etRegisterPassword.text.toString()
                     )
-                    val intent = Intent(requireActivity(), MainActivity::class.java)
-                    startActivity(intent)
+
                 }
             }
         }

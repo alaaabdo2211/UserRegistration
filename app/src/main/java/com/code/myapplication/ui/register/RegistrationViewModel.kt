@@ -5,10 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.code.myapplication.data.local.AuthenticationRepository
 import com.code.myapplication.data.local.UserEntity
 import com.code.myapplication.domain.usecases.ValidationUseCase
+import com.code.myapplication.util.UiSingleEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
@@ -22,7 +21,8 @@ class RegistrationViewModel @Inject constructor(
 
     private val _state = MutableStateFlow(RegisterState())
     val state = _state.asStateFlow()
-
+    private val _uiEvent = MutableSharedFlow<UiSingleEvent>()
+    val uiEvent = _uiEvent.asSharedFlow()
     fun submitData(
         fullName: String,
         email: String,
@@ -73,7 +73,12 @@ class RegistrationViewModel @Inject constructor(
                     )
                 }
             } else {
+
                 registerUser(fullName, email, nationalId, phoneNumber, dateOfBirth, password)
+                viewModelScope.launch {
+                    _uiEvent.emit(UiSingleEvent.NavigateToNextPage)
+                }
+
             }
         }
     }
