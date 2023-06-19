@@ -44,6 +44,7 @@ class RegistrationFragment :
                 if (it is UiSingleEvent.NavigateToNextPage) {
                     val intent = Intent(requireActivity(), MainActivity::class.java)
                     startActivity(intent)
+                    requireActivity().finish()
                 }
             }
         }
