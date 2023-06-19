@@ -25,6 +25,7 @@ class AuthenticationActivity : AppCompatActivity() {
 
 
         binding.txtLogin.setOnClickListener {
+            navController.popBackStack()
             navController.navigate(R.id.loginFragment2)
             binding.txtRegister.setTextAppearance(R.style.regular_black_medium)
             binding.txtRegister.setText(R.string.register)
@@ -33,6 +34,7 @@ class AuthenticationActivity : AppCompatActivity() {
 
         }
         binding.txtRegister.setOnClickListener {
+            navController.popBackStack()
             navController.navigate(R.id.registrationFragment2)
             binding.txtRegister.setTextAppearance(R.style.bold_black_medium)
             binding.txtRegister.setText(R.string.underlined_register)

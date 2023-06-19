@@ -13,10 +13,6 @@ internal class ValidationUseCaseTest {
     val validateDateOfBirthUseCase = ValidateDateOfBirthUseCase()
     val validateFullNameUseCase = ValidateFullNameUseCase()
 
-
-
-
-
     @Test
     fun `empty email should return is valid false`() {
         val useCase = validateEmailUseCase("")
@@ -31,7 +27,7 @@ internal class ValidationUseCaseTest {
 
     @Test
     fun `valid email format should return true`() {
-        val useCase = validateEmailUseCase("a@yahoo.com")
+        val useCase = validateEmailUseCase("aawe@yahoo.com")
         Truth.assertThat(useCase.isValid).isEqualTo(true)
     }
 
@@ -40,6 +36,7 @@ internal class ValidationUseCaseTest {
         val useCase = validatePasswordUseCase("a12345")
         Truth.assertThat(useCase.isValid).isEqualTo(false)
     }
+
     @Test
     fun `empty password should return false`() {
         val useCase = validatePasswordUseCase("")
@@ -57,11 +54,13 @@ internal class ValidationUseCaseTest {
         val useCase = validateNationalIdUseCase("")
         Truth.assertThat(useCase.isValid).isEqualTo(false)
     }
+
     @Test
     fun `invalid nationalId format should return false`() {
         val useCase = validateNationalIdUseCase("a12332b")
         Truth.assertThat(useCase.isValid).isEqualTo(false)
     }
+
     @Test
     fun `valid nationalId format should return true`() {
         val useCase = validateNationalIdUseCase("1234567")
@@ -73,6 +72,7 @@ internal class ValidationUseCaseTest {
         val useCase = validateDateOfBirthUseCase("")
         Truth.assertThat(useCase.isValid).isEqualTo(false)
     }
+
     @Test
     fun `valid dateOfBirth should return true`() {
         val useCase = validateDateOfBirthUseCase("12-07-1997")

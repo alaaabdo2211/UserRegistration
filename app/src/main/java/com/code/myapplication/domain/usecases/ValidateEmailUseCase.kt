@@ -1,7 +1,7 @@
 package com.code.myapplication.domain.usecases
 
-import android.util.Patterns
 import com.code.myapplication.R
+import com.code.myapplication.util.Patterns
 import javax.inject.Inject
 
 
@@ -12,7 +12,7 @@ class ValidateEmailUseCase @Inject constructor() {
                 ValidationModel(
                     isValid = false, errorMessageResId = R.string.email_address_is_required
                 )
-            } else if (!Patterns.EMAIL_ADDRESS.matcher(it).matches()) {
+            } else if (!Patterns.EMAIL_ADDRESS_PATTERN.matcher(it).matches()) {
                 ValidationModel(
                     isValid = false, errorMessageResId = R.string.enter_valid_email_address
                 )

@@ -18,4 +18,9 @@ object Patterns {
                 ".{8,}" +  //at least 8 characters
                 "$"
     )
+    val EMAIL_ADDRESS_PATTERN: Pattern = Pattern.compile(
+        "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})\$"
+    )
+
+    val NATIONAL_ID_PATTERN : Pattern = Pattern.compile("^[0-9]+\$")
 }
