@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تسجيل المستخدم</string>
+    <string name="email_address_is_required">تأكد من ادخال بريدك الإلكتروني</string>
+    <string name="enter_valid_email_address">ادخل بريدك الإلكتروني بشكل صحيح</string>
+    <string name="password_validation">    يجب ان تتكون كلمة السر من 8 خانات على الأقل و تحتوي على حرف صغير واحد ، حرف كبير واحد ، رقم و رمز خاص</string>
+    <string name="password_is_required">رجاءً ادخل كلمة المرور</string>
+    <string name="phone_number_is_required">تأكد من ادخال رقم الهاتف</string>
+    <string name="enter_valid_phone_number">رجاءً ادخل رقم الهاتف بشكل صحيح</string>
+    <string name="full_name_is_required">تأكد من ادخال اسمك الكامل</string>
+    <string name="date_is_required">تأكد من ادخال تاريخ ميلادك</string>
+    <string name="national_id_is_required">تأكد من ادخال رقمك الوطني</string>
+    <string name="enter_a_valid_national_id">رجاءً ادخل رقمك الوطني بشكل صحيح</string>
+    <string name="please_enter_a_valid_jordanian_phone_number">رجاءً تأكد من ادخال رقمك الأردني بشكل صحيح</string>
+    <string name="this_field_only_english_letters">يجب عليك استخدام الأحرف فقط في ادخال اسمك الكامل</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="email_domain">Email@domain.com</string>
+    <string name="details">التفاصيل</string>
+    <string name="national_id">الرقم الوطني</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="date_of_birth">تاريخ الميلاد</string>
+    <string name="settings">الاعدادات</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="data"> البيانات</string>
+    <string name="sort"><u>ترتيب</u></string>
+    <string name="search">بحث</string>
+    <string name="title">العنوان</string>
+    <string name="joined_date">تاريخ الانضمام</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة السر</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="register">تسجيل</string>
+    <string name="underlined_login"><u>تسجيل الدخول</u></string>
+    <string name="underlined_register"><u>تسجيل</u></string>
+    <string name="dashboard">واجهة المستخدم</string>
+    <string name="more">المزيد</string>
+    <string name="something_went_wrong_try_again">حدث خطأ ما</string>
+    <string name="email_exist">هذا البريد الإلكتروني موجود</string>
+    <string name="check_email_or_password">تأكد من البريد الإلكتروني و كلمة المرور</string>
+    <string name="language"><u>EN</u></string>
+
+
+</resources>

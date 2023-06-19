@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.more.MoreFragment"
+
+    >
+
+    <Toolbar
+        android:id="@+id/toolBarMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/groupView"
+        app:constraint_referenced_ids="ivUser,txtDateB,txtDateBirth,txtDetails,txtEmail,txtFullName,txtLogout,txtNationalID,txtNationalIDNum,txtPhoneN,txtPhoneNumber,txtSettings,view1,ivLogout"/>
+
+    <ProgressBar
+        android:id="@+id/moreProgress"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toolBarMore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/baseline_person_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBarMore" />
+
+    <TextView
+        android:id="@+id/txtFullName"
+        style="@style/bold_black_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/full_name"
+        app:layout_constraintStart_toEndOf="@+id/ivUser"
+        app:layout_constraintTop_toTopOf="@+id/ivUser" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        style="@style/regular_black_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/email_domain"
+        app:layout_constraintStart_toStartOf="@+id/txtFullName"
+        app:layout_constraintTop_toBottomOf="@+id/txtFullName" />
+
+    <TextView
+        android:id="@+id/txtDetails"
+        style="@style/bold_black_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/details"
+        app:layout_constraintStart_toStartOf="@+id/ivUser"
+        app:layout_constraintTop_toBottomOf="@+id/ivUser" />
+
+    <TextView
+        android:id="@+id/txtNationalID"
+        style="@style/regular_black_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/national_id"
+        app:layout_constraintStart_toStartOf="@+id/txtDetails"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetails" />
+
+    <TextView
+        android:id="@+id/txtNationalIDNum"
+        style="@style/regular_black_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/national_id"
+        app:layout_constraintStart_toStartOf="@+id/txtNationalID"
+        app:layout_constraintTop_toBottomOf="@+id/txtNationalID" />
+
+    <TextView
+        android:id="@+id/txtPhoneN"
+        style="@style/regular_black_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/phone_number"
+        app:layout_constraintStart_toStartOf="@+id/txtNationalIDNum"
+        app:layout_constraintTop_toBottomOf="@+id/txtNationalIDNum" />
+    <TextView
+        android:id="@+id/txtPhoneNumber"
+        style="@style/regular_black_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_number"
+        app:layout_constraintStart_toStartOf="@+id/txtPhoneN"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhoneN" />
+
+    <TextView
+        android:id="@+id/txtDateB"
+        style="@style/regular_black_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/date_of_birth"
+        app:layout_constraintStart_toStartOf="@+id/txtPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhoneNumber" />
+    <TextView
+        android:id="@+id/txtDateBirth"
+        style="@style/regular_black_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_of_birth"
+        app:layout_constraintStart_toStartOf="@+id/txtDateB"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateB" />
+
+    <TextView
+        android:id="@+id/txtSettings"
+        style="@style/regular_black_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/settings"
+        app:layout_constraintStart_toStartOf="@+id/txtDateBirth"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateBirth" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSettings" />
+
+    <LinearLayout
+        android:id="@+id/linearLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1">
+
+        <ImageView
+            android:id="@+id/ivLogout"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="25dp"
+            android:src="@drawable/logout_svgrepo_com" />
+
+        <TextView
+            android:id="@+id/txtLogout"
+            style="@style/bold_black_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/logout"
+            app:layout_constraintBottom_toBottomOf="@+id/ivLogout"
+            app:layout_constraintStart_toEndOf="@+id/ivLogout"
+            app:layout_constraintTop_toTopOf="@+id/ivLogout" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
